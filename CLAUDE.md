@@ -79,6 +79,7 @@ top = cache.get_top_scores(score_type="oversold_score", min_score=5.0)
 | Volatility | `bb_upper`, `bb_lower`, `bb_position`, `atr` |
 | Volume | `volume`, `volume_ratio`, `obv` |
 | Scores | `bullish_score`, `reversal_score`, `oversold_score` |
+| AI Commentary | `ai_bullish_reason`, `ai_tech_summary` |
 
 ## Data Source
 

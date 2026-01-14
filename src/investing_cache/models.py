@@ -74,6 +74,10 @@ class TickerData:
     price_52w_high: Optional[float] = None
     pct_from_52w_high: Optional[float] = None
 
+    # AI Commentary (from GrokAnalyzer)
+    ai_bullish_reason: Optional[str] = None
+    ai_tech_summary: Optional[str] = None
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "TickerData":
         """
@@ -137,6 +141,9 @@ class TickerData:
             # 52-week
             price_52w_high=data.get("price_52w_high"),
             pct_from_52w_high=data.get("pct_from_52w_high"),
+            # AI Commentary
+            ai_bullish_reason=data.get("ai_bullish_reason"),
+            ai_tech_summary=data.get("ai_tech_summary"),
         )
 
     def to_dict(self) -> Dict[str, Any]:
@@ -182,6 +189,8 @@ class TickerData:
             "divergence_strength",
             "price_52w_high",
             "pct_from_52w_high",
+            "ai_bullish_reason",
+            "ai_tech_summary",
         ]
 
         for field in fields:
